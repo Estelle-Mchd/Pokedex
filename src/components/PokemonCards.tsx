@@ -6,18 +6,23 @@ const pokemonList = [
     },
     {
         name: "mew",
-        imgSrc: "",
     },
 ];
 
 function PokemonCards() {
     const pokemon = pokemonList[1];
-
     return (
-        <div>
-            <h2>{pokemon.name}</h2>
-            {pokemon.imgSrc ? (<img src={pokemon.imgSrc} alt={pokemon.name} />) : (<p>???</p>)}
-        </div>
+        <figure>
+            {pokemon.imgSrc ? (
+                <img
+                    src={pokemon.imgSrc}
+                    alt={pokemon.name}
+                />
+            ) : (
+                <p>???</p>
+            )}
+            <figcaption>{pokemon.name}</figcaption>
+        </figure>
     );
 }
 
