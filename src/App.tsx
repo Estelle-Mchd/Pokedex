@@ -45,7 +45,7 @@ function App() {
       <nav>
         <div>
           {pokemonList.map((pokemon) => (
-            <button key={pokemon.name} onClick={() => setPokemonName(pokemon.name)}>{pokemon.name}</button>
+            <button type="button" key={pokemon.name} onClick={() => setPokemonName(pokemon.name)}>{pokemon.name}</button>
           ))}
         </div>
       </nav>
